@@ -6,9 +6,16 @@ import * as Yup from "yup";
 const estadoInicial = { nombre: "", apellido: "", email: "", password: "" };
 
 const validationSchema = Yup.object({
-  nombre: Yup.string().required("El nombre es obligatorio"),
-  apellido: Yup.string().required("El apellido es obligatorio"),
-  email: Yup.string().required("El email es obligatorio"),
+  nombre: Yup.string()
+    .min(3, "El nombre debe ser mas largo")
+    .matches(/^[A-Za-zÁÉÍÓÚáéíóúÑñ]+$/, "El nombre solo debe contener letras")
+    .required("El nombre es obligatorio"),
+  apellido: Yup.string()
+    .matches(/^[A-Za-zÁÉÍÓÚáéíóúÑñ]+$/, "El apellido solo debe contener letras")
+    .required("El apellido es obligatorio"),
+  email: Yup.string()
+    .email("Debe tener formato email")
+    .required("El email es obligatorio"),
   password: Yup.string().required("El password es obligatorio"),
 });
 
