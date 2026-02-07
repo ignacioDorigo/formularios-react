@@ -1,5 +1,11 @@
 import React from "react";
+import "./App.css";
+import Formulario from "./components/Formulario";
 
 export default function App() {
-  return <div></div>;
+  return (
+    <main className="main">
+      <Formulario></Formulario>
+    </main>
+  );
 }

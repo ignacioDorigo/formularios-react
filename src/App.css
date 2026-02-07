@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,7 +43,91 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  transition: all .3s ease-in-out;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    width: 30%;
+    padding: 1rem 3rem;
+
+  }
+}
+
+.formulario__campos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1REM;
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.formulario__label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario__input {
+  padding: 1rem 1.5rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 5PX;
+}
+
+.formulario:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario__boton {
+  margin-top: 2rem;
+  display: flex;
+  align-self: flex-end;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  border: 2px solid #282c34;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 100%;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .formulario__boton {
+    width: max-content;
+  }
+}
+
+.formulario__boton:hover {
+  background-color: #282c34;
+  color: #FFF;
 }
