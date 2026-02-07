@@ -131,3 +131,18 @@ html {
   background-color: #282c34;
   color: #FFF;
 }
+
+.div__checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.formulario__checkbox {
+  align-self: flex-start;
+  border: 2px solid #E1E1E1;
+  background-color: red;
+}
+
+.div__aux__radio{
+  display: flex;
+}

@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 
 export default function ControlledFormV1() {
-  const estadoInicial = { email: "", password: "", genero: "" };
+  const estadoInicial = {
+    email: "",
+    password: "",
+    genero: "",
+    genero2: "",
+    terminos: false,
+  };
   const [formulario, setFormulario] = useState(estadoInicial);
 
   const actualizarFormulario = (e) => {
     const { target } = e;
-    const { name, value } = target;
+    const { name, value, type, checked } = target;
 
-    setFormulario({
-      ...formulario,
-      [name]: value,
-    });
+    if (type === "checkbox") {
+      setFormulario({
+        ...formulario,
+        [name]: checked ? true : false,
+      });
+    } else {
+      setFormulario({
+        ...formulario,
+        [name]: value,
+      });
+    }
   };
 
   const enviarFormulario = (e) => {
@@ -72,6 +85,61 @@ export default function ControlledFormV1() {
             <option value="Femenino">Femenino</option>
             <option value="Indefinido">Prefiero no decirlo</option>
           </select>
+        </div>
+
+        <div className="formulario__campo div__checkbox">
+          <input
+            className="formulario__checkbox"
+            id="terminos"
+            name="terminos"
+            type="checkbox"
+            // value={formulario.terminos}
+            checked={formulario.terminos}
+            onChange={(e) => actualizarFormulario(e)}
+          ></input>
+          <label className="formulario__label" htmlFor="terminos">
+            Aceptar Términos
+          </label>
+        </div>
+
+        {/* Este mucho no me acuerdo como se usa, pero casi siempre se puede hacer lo mismo con select */}
+        <div className="formulario__campo">
+          <p className="formulario__label">Género</p>
+
+          <div className="div__aux__radio">
+            <input
+              type="radio"
+              name="genero2"
+              value="hombre"
+              id="hombre"
+              onChange={(e) => actualizarFormulario(e)}
+            />
+
+            <label htmlFor="hombre">Hombre</label>
+          </div>
+
+          <div className="div__aux__radio">
+            <input
+              type="radio"
+              name="genero2"
+              value="mujer"
+              id="mujer"
+              onChange={(e) => actualizarFormulario(e)}
+            />
+
+            <label htmlFor="mujer">Mujer</label>
+          </div>
+
+          <div className="div__aux__radio">
+            <input
+              type="radio"
+              name="genero2"
+              value="indefinido"
+              id="indefinido"
+              onChange={(e) => actualizarFormulario(e)}
+            />
+            <label htmlFor="indefinido">Indefinido</label>
+          </div>
         </div>
       </div>
 
