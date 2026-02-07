@@ -1,0 +1,37 @@
+.usuario {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 
+    transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), /* rebote */
+    box-shadow 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
+}
+
+.usuario:hover {
+  transform: scale(1.05) rotateZ(1deg); /* escala + rotación leve */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.35);
+  background-color: #f0f8ff; /* cambio de color suave */
+}
+
+/* Texto bold al pasar el mouse */
+.usuario--bold {
+  font-weight: bold;
+  transition: color 0.4s ease-in-out;
+}
+
+/* Opcional: animación interna de nombres y email */
+.usuario__nombre,
+.usuario__apellido,
+.usuario__email {
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.usuario:hover .usuario__nombre,
+.usuario:hover .usuario__apellido,
+.usuario:hover .usuario__email {
+  transform: translateY(-2px);
+  color: #1e90ff;
+}
