@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function ControlledFormV1() {
-  const estadoInicial = { email: "", password: "" };
+  const estadoInicial = { email: "", password: "", genero: "" };
   const [formulario, setFormulario] = useState(estadoInicial);
 
   const actualizarFormulario = (e) => {
@@ -56,7 +56,25 @@ export default function ControlledFormV1() {
             required
           ></input>
         </div>
+
+        <div className="formulario__campo">
+          <label className="formulario__label">Género</label>
+          <select
+            className="formulario__input"
+            value={formulario.genero}
+            onChange={(e) => actualizarFormulario(e)}
+            name="genero"
+          >
+            <option value={""} disabled>
+              --Seleccionar Género --
+            </option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Indefinido">Prefiero no decirlo</option>
+          </select>
+        </div>
       </div>
+
       <button type="submit" className="formulario__boton">
         Enviar
       </button>
