@@ -37,7 +37,7 @@ Este repositorio es un laboratorio práctico diseñado para dominar las diferent
 1.  **Clonar el repo:**
 
     ```bash
-    git clone [https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
+    git clone https://github.com/ignacioDorigo/formularios-react
     ```
 
 2.  **Instalar las dependencias:**
