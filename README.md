@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 📝 React Forms Practice: Controlled, Uncontrolled & Validations
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio es un laboratorio práctico diseñado para dominar las diferentes estrategias de manejo de formularios en **React**. Es ideal para entender cuándo utilizar el estado de React y cuándo delegar el control al DOM o a librerías externas.
 
-## Available Scripts
+## 🚀 Características del Proyecto
 
-In the project directory, you can run:
+- **Controlled Components:** Implementación de inputs sincronizados con el estado (`useState`).
+- **Uncontrolled Components:** Captura de datos mediante `useRef` (acceso directo al DOM).
+- **Formik + Yup:** Gestión de formularios complejos con esquemas de validación robustos.
+- **Contador Funcional:** Ejercicio simple para reforzar la lógica de actualización de estado.
+- **Responsive Design:** Interfaz adaptada para dispositivos móviles y escritorio.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Stack Tecnológico
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React:** Biblioteca principal.
+- **Formik:** Para facilitar el manejo de estados de formularios, envíos y errores.
+- **Yup:** Para la creación de esquemas de validación de datos.
+- **CSS3:** Estilos personalizados y responsive.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📂 Contenido del Laboratorio
 
-### `npm run build`
+| Sección                        | Concepto Clave                                  | Herramienta      |
+| :----------------------------- | :---------------------------------------------- | :--------------- |
+| **Formularios Controlados**    | Fuente única de verdad (Single Source of Truth) | `useState`       |
+| **Formularios No Controlados** | Rendimiento y acceso directo al DOM             | `useRef`         |
+| **Validaciones**               | Esquemas de validación y mensajes de error      | `Formik` & `Yup` |
+| **Estado Simple**              | Lógica de incremento y decremento               | `useState`       |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Configuración Local
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  **Clonar el repo:**
 
-### `npm run eject`
+    ```bash
+    git clone [https://github.com/tu-usuario/nombre-del-repo.git](https://github.com/tu-usuario/nombre-del-repo.git)
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.  **Instalar las dependencias:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.  **Lanzar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 💡 ¿Por qué practicar esto?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> En React, entender la diferencia entre componentes **controlados** y **no controlados** es vital. Los controlados ofrecen mayor control para validaciones en tiempo real, mientras que los no controlados pueden ser útiles en casos de integración con librerías externas o formularios de alto rendimiento.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 👤 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Ignacio Tomás Dorigo** - [GitHub](https://github.com/ignacioDorigo)
+- **LinkedIn** - [Tu Perfil](www.linkedin.com/in/ignacio-dorigo-3aa267203)
