@@ -1,14 +1,19 @@
-const Formulario = () => {
+const UncontrolledForm = () => {
   const enviarFormulario = (e) => {
     e.preventDefault();
-    console.log("Formulario enviado....");
-    const data = Array.from(new FormData(e.target));
-    console.log(Object.fromEntries(data));
+    // Agaramos el form
+    const formulario = e.target;
+    // Hcemos un form data de los inputs y values del form, tienen que tener el atributo name
+    const formularioFormData = new FormData(formulario);
+    // Creamos un array a partir de ese form data
+    const formularioArray = Array.from(formularioFormData);
+    // Creamos un objeto a partir de ese array
+    const formularioObjeto = Object.fromEntries(formularioArray);
+    console.log(formularioObjeto);
   };
-
   return (
-    <form className="formulario" method="GET" onSubmit={enviarFormulario}>
-      <h1>Formulario</h1>
+    <form className="formulario" onSubmit={enviarFormulario} method="POST">
+      <h1>Formulario Login</h1>
 
       <div className="formulario__campos">
         <div className="formulario__campo">
@@ -16,30 +21,27 @@ const Formulario = () => {
             Email
           </label>
           <input
-            autoComplete="false"
             className="formulario__input"
-            id="email"
-            name="email"
             placeholder="Ingrese su correo"
             type="email"
+            name="email"
+            id="email"
+            autoComplete="true"
           ></input>
-        </div>
 
-        <div className="formulario__campo">
           <label className="formulario__label" htmlFor="password">
             Contraseña
           </label>
           <input
-            autoComplete="false"
+            autoComplete="true"
             className="formulario__input"
-            id="password"
-            name="password"
             placeholder="Ingrese su contraseña"
             type="password"
+            name="password"
+            id="password"
           ></input>
         </div>
       </div>
-
       <button type="submit" className="formulario__boton">
         Enviar
       </button>
@@ -47,4 +49,4 @@ const Formulario = () => {
   );
 };
 
-export default Formulario;
+export default UncontrolledForm;
