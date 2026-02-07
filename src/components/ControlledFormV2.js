@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 
 export default function ControlledFormV1() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const enviarFormulario = (e) => {
-    e.preventDefault();
-    const formulario = {};
-    formulario.email = email;
-    formulario.password = password;
-    console.log(formulario);
+  const estadoInicial = { email: "", password: "" };
+  const [formulario, setFormulario] = useState(estadoInicial);
+
+  const actualizarFormulario = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setFormulario({
+      ...formulario,
+      [name]: value,
+    });
   };
 
+  const enviarFormulario = (e) => {
+    e.preventDefault();
+    console.log(formulario);
+  };
 
   return (
     <form onSubmit={enviarFormulario} className="formulario" method="POST">
@@ -25,8 +32,8 @@ export default function ControlledFormV1() {
             className="formulario__input"
             id="email"
             name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={formulario.email}
+            onChange={(e) => actualizarFormulario(e)}
             type="email"
             placeholder="Ingrese su correo"
             required
@@ -41,8 +48,8 @@ export default function ControlledFormV1() {
             className="formulario__input"
             id="password"
             name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={formulario.password}
+            onChange={(e) => actualizarFormulario(e)}
             type="password"
             placeholder="Ingrese su contraseña"
             autoComplete="true"
