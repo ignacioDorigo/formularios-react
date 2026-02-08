@@ -4,6 +4,7 @@ import "./App.css";
 import GestorUsuario from "./components/GestorUsuario/GestorUsuario";
 import Usuario from "./components/Usuario/Usuario";
 import FormikForm from "./components/FormikForm/FormikForm";
+import FormikFormValidaciones from "./components/FormikForm/FormikFormValidacion";
 // import Formulario from "./components/Formulario";
 // import UncontrolledForm from "./components/UncontrolledForm";
 // import ControlledFormV1 from "./components/ControlledFormV1";
@@ -31,7 +32,8 @@ export default function App() {
         </ul>
       </div> */}
 
-      <FormikForm></FormikForm>
+      {/* <FormikForm></FormikForm> */}
+      <FormikFormValidaciones></FormikFormValidaciones>
     </main>
   );
 }
