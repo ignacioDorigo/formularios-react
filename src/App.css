@@ -55,7 +55,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;gap: 2rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .formulario {
@@ -144,6 +145,10 @@ html {
   background-color: red;
 }
 
-.div__aux__radio{
+.div__aux__radio {
   display: flex;
+}
+
+.formulario__errores {
+  color: red;
 }
