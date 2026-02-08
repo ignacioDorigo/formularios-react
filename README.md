@@ -62,4 +62,4 @@ Este repositorio es un laboratorio práctico diseñado para dominar las diferent
 ## 👤 Autor
 
 - **Ignacio Tomás Dorigo** - [GitHub](https://github.com/ignacioDorigo)
-- **LinkedIn** - [Tu Perfil](www.linkedin.com/in/ignacio-dorigo-3aa267203)
+- **LinkedIn** - [LinkedIn](www.linkedin.com/in/ignacio-dorigo-3aa267203)
