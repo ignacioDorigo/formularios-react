@@ -1,6 +1,6 @@
+import Swal from "sweetalert2";
 import { useFormik } from "formik";
 import React from "react";
-import Swal from "sweetalert2";
 
 const valoresIniciales = {
   email: "",
