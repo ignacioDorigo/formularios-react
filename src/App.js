@@ -5,6 +5,7 @@ import GestorUsuario from "./components/GestorUsuario/GestorUsuario";
 import Usuario from "./components/Usuario/Usuario";
 import FormikForm from "./components/FormikForm/FormikForm";
 import FormikFormValidaciones from "./components/FormikForm/FormikFormValidacion";
+import FormikComponentes from "./components/FormikComponentes/FormikComponentes";
 // import Formulario from "./components/Formulario";
 // import UncontrolledForm from "./components/UncontrolledForm";
 // import ControlledFormV1 from "./components/ControlledFormV1";
@@ -33,7 +34,8 @@ export default function App() {
       </div> */}
 
       {/* <FormikForm></FormikForm> */}
-      <FormikFormValidaciones></FormikFormValidaciones>
+      {/* <FormikFormValidaciones></FormikFormValidaciones> */}
+      <FormikComponentes></FormikComponentes>
     </main>
   );
 }
